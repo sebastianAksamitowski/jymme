@@ -20,7 +20,7 @@ const ScrollToTop = () => {
     show && (
       <buton
         onClick={() => scrollToTop()}
-        className='btn btn-sm btn-primary flex items-center justify-center text-white font-medium w-14 h-14 fixed bottom-[6%] right-[6%] z-50 transition-all cursor-pointer'
+        className='btn btn-sm btn-primary flex items-center justify-center text-white font-medium w-14 h-14 fixed bottom-[13%] right-[6%] z-50 transition-all cursor-pointer'
       >
         <div className='text-3xl'>
           <RiArrowUpSLine />
