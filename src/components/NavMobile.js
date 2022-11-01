@@ -11,7 +11,7 @@ const menuHandler = () => {
   document.getElementById('nav').className = menuClose;
 };
 
-const NavMobile = ({ navMobile }) => {
+const NavMobile = ({ navMobile, setNavMbl }) => {
   return (
     <nav
       className={`${
@@ -24,7 +24,10 @@ const NavMobile = ({ navMobile }) => {
           return (
             <li key={idx}>
               <Link
-                onClick={menuHandler}
+                onClick={()=> {
+                  setNavMbl(false)
+                  menuHandler()
+                }}
                 to={item.name}
                 activeClass='active'
                 smooth='true'

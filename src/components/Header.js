@@ -50,7 +50,7 @@ const Header = () => {
           <RiMenu4Fill className='text-primary-200 text-3xl cursor-pointer' />
         )}
       </div>
-      <NavMobile navMobile={navMbl} />
+      <NavMobile navMobile={navMbl} setNavMbl={setNavMbl} />
       {/* btns - initially hidden - show on desktop */}
       <div className='hidden lg:flex space-x-4'>
         <button className='btn btn-sm text-white hover:text-primary-200 transition'>
