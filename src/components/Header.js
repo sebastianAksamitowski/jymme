@@ -11,7 +11,7 @@ import NavMobile from '../components/NavMobile';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
-  const [navMbl, setNavMbl] = useState(false);
+  const [navMobile, setNavMobile] = useState(false);
 
   // scroll event
   useEffect(() => {
@@ -41,16 +41,16 @@ const Header = () => {
       <Nav />
       {/* nav menu btn - hide on desktop */}
       <div
-        onClick={() => setNavMbl(!navMbl)}
+        onClick={() => setNavMobile(!navMobile)}
         className='lg:hidden absolute right-4'
       >
-        {navMbl ? (
+        {navMobile ? (
           <RiCloseFill className='text-primary-200 text-3xl cursor-pointer' />
         ) : (
           <RiMenu4Fill className='text-primary-200 text-3xl cursor-pointer' />
         )}
       </div>
-      <NavMobile navMobile={navMbl} />
+      <NavMobile navMobile={navMobile} setNavMobile={setNavMobile} />
       {/* btns - initially hidden - show on desktop */}
       <div className='hidden lg:flex space-x-4'>
         <button className='btn btn-sm text-white hover:text-primary-200 transition'>
